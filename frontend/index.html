@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asistente para PC lenta</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>¿Tu computadora está lenta?</h1>
+      <p>Te guío paso a paso para hacer mejoras básicas sin romper nada.</p>
+    </header>
+
+    <section class="card diagnostico">
+      <h2>Diagnóstico rápido</h2>
+      <p>Marcá lo que te pasa:</p>
+
+      <label><input type="checkbox" /> Internet tarda en abrir</label>
+      <label><input type="checkbox" /> Los programas tardan mucho</label>
+      <label><input type="checkbox" /> La computadora se traba seguido</label>
+
+      <button class="secondary" onclick="mostrarMensajeDiagnostico()">Ver resultado</button>
+      <p id="resultado-diagnostico" class="info"></p>
+    </section>
+
+    <section class="card">
+      <h2>Paso 1 — Vaciar la papelera</h2>
+      <p>Elimina archivos que ya borraste y siguen ocupando espacio.</p>
+      <button onclick="ejecutarAccion('/vaciar-papelera')">Vaciar papelera</button>
+    </section>
+
+    <section class="card">
+      <h2>Paso 2 — Abrir limpieza de disco</h2>
+      <p>Windows puede borrar archivos innecesarios que se acumulan con el tiempo.</p>
+      <button onclick="ejecutarAccion('/abrir-limpieza')">Abrir limpieza de disco</button>
+    </section>
+
+    <section class="card">
+      <h2>Paso 3 — Revisar programas de inicio</h2>
+      <p>Algunos programas se abren solos al prender la PC y la hacen más lenta.</p>
+      <button onclick="ejecutarAccion('/abrir-inicio')">Abrir programas de inicio</button>
+    </section>
+
+    <section class="card">
+      <h2>Paso 4 — Cerrar programas trabados</h2>
+      <p>Si un programa no responde, podés cerrarlo desde una herramienta de Windows.</p>
+      <button onclick="ejecutarAccion('/abrir-admin-tareas')">Abrir Administrador de tareas</button>
+    </section>
+
+    <section class="card final">
+      <h2>¿Tu computadora sigue lenta?</h2>
+      <p>Si hiciste todos los pasos y no hubo mejora, el problema puede ser más profundo. En ese caso, conviene no seguir tocando cosas sin revisar mejor el equipo.</p>
+      <a class="whatsapp" href="https://wa.me/5490000000000" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+      <p class="small">Cambiá este número por el tuyo en el archivo <strong>frontend/index.html</strong>.</p>
+    </section>
+
+    <section class="card estado">
+      <h2>Estado</h2>
+      <p id="resultado">Todavía no ejecutaste ninguna acción.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
